@@ -20,8 +20,8 @@ def prepareModel():
 
 def main():
 
-	# CollectImages()
-	prepareModel()
+	CollectImages()
+	# prepareModel()
 
 
 if __name__ == '__main__':
