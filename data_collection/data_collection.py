@@ -59,7 +59,7 @@ class CollectData(object):
 	    cv2.rectangle(frame, (x1-1, y1-1), (x2+1, y2+1), (0, 255 , 0) ,1)
 	    # Extracting the ROI
 	    roi = frame[y1:y2, x1:x2]
-	    roi = cv2.resize(roi, (400, 440)) 
+	    roi = cv2.resize(roi, (200, 200)) 
 
 	    return roi
 
@@ -147,11 +147,6 @@ class CollectData(object):
 				else:
 					self.mode = 'train'
 				self.working_dir = 'Data/'+self.mode	
-
-def main():
-	current_directory = os.getcwd()
-	data = CollectData(current_directory)
-	data.generateData()
 
 
 if __name__ == '__main__':
