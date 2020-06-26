@@ -146,6 +146,7 @@ class CollectData(object):
 					self.mode = 'test'
 				else:
 					self.mode = 'train'
+				self.working_dir = 'Data/'+self.mode	
 
 def main():
 	current_directory = os.getcwd()
