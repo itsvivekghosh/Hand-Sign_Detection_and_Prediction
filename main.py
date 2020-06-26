@@ -12,13 +12,15 @@ def CollectImages():
 
 def prepareModel():
 
-	train_model.main()
+	train_dir = 'Data/train/'
+	test_dir = 'Data/test/'
+	train_model.trainTheModel(train_dir, test_dir)
 	pass
 
 
 def main():
 
-	CollectImages()
+	# CollectImages()
 	prepareModel()
 
 

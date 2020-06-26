@@ -37,6 +37,7 @@ class CollectData(object):
 		print("Exiting...")
 
 	def generateTextIntoFrame(self, frame):
+		
 		cv2.putText(frame, "MODE: " + self.mode, (10, 50), cv2.FONT_HERSHEY_PLAIN, 1, (255, 0, 0), 1)
 		cv2.putText(frame, "IMAGE COUNT: ", (10, 100), cv2.FONT_HERSHEY_PLAIN, 1, (255, 0, 0), 1)
 		cv2.putText(frame, "ZERO: " + str(self.images_count['zero']), (10, 120), cv2.FONT_HERSHEY_PLAIN, 1, (255, 0, 0), 1)
