@@ -10,10 +10,10 @@ class CollectData(object):
 
 		print("Initializing...")
 		self.curr_dir = curr_dir
-		self.model_train_path = '../Data/train/'
-		self.model_test_path = '../Data/test/'
+		self.model_train_path = '../data/train/'
+		self.model_test_path = '../data/test/'
 
-		if not os.path.exists("Data"):
+		if not os.path.exists("data"):
 
 			os.makedirs(self.model_train_path)
 			os.makedirs(self.model_test_path)
@@ -23,7 +23,7 @@ class CollectData(object):
 				os.makedirs(self.model_test_path+"{}".format(i))
 
 		self.mode = 'train'
-		self.working_dir = 'Data/' + self.mode
+		self.working_dir = 'data/' + self.mode
 
 		self.images_count = {}
 
@@ -147,7 +147,7 @@ class CollectData(object):
 					self.mode = 'test'
 				else:
 					self.mode = 'train'
-				self.working_dir = 'Data/'+self.mode	
+				self.working_dir = 'data/'+self.mode	
 
 
 def main():

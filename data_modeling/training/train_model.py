@@ -29,7 +29,7 @@ class PrepareModel(object):
 		self.model_checkpoint = None
 		self.reduce_lr = None
 		self.callbacks = None
-		self.model_path = '../../Model/'
+		self.model_path = '../../model/'
 
 	def prepareImageGenerator(self):
 
@@ -37,12 +37,12 @@ class PrepareModel(object):
 			horizontal_flip = True, 
 			vertical_flip = True,
 			shear_range = 0.3, 
-			zoom_range = 0.2,
-			rescale = 1/255.
+			zoom_range = 0.1,
+			rescale = 1./255
 		)
 
 		test_datagen = ImageDataGenerator(
-			rescale = 1/255.
+			rescale = 1./255
 		)
 
 		train_set = train_datagen.flow_from_directory(
@@ -78,13 +78,6 @@ class PrepareModel(object):
 		self.model.add(Conv2D(filters=64, kernel_size = (3, 3), padding='same', kernel_initializer = 'normal'))
 		self.model.add(Activation("relu"))
 		self.model.add(Conv2D(filters=64, kernel_size = (3, 3), padding='same', kernel_initializer = 'normal'))
-		self.model.add(Activation("relu"))
-		self.model.add(MaxPooling2D(pool_size=(2, 2)))
-		self.model.add(Dropout(0.25))
-
-		self.model.add(Conv2D(filters=128, kernel_size = (3, 3), padding='same', kernel_initializer = 'normal'))
-		self.model.add(Activation("relu"))
-		self.model.add(Conv2D(filters=128, kernel_size = (3, 3), padding='same', kernel_initializer = 'normal'))
 		self.model.add(Activation("relu"))
 		self.model.add(MaxPooling2D(pool_size=(2, 2)))
 		self.model.add(Dropout(0.25))
@@ -128,7 +121,7 @@ class PrepareModel(object):
 		self.history = self.model.fit_generator(
 			train_set, 
 			steps_per_epoch = len(train_set),
-			epochs= 10,
+			epochs = 10,
 			validation_data = test_set,
 			validation_steps = len(test_set),
 			callbacks = self.callbacks
@@ -137,7 +130,7 @@ class PrepareModel(object):
 
 
 
-def trainTheModel(train_dir = '../../Data/train/', test_dir = '../../Data/test'):
+def trainTheModel(train_dir = '../../data/train/', test_dir = '../../data/test'):
 
 	prep = PrepareModel(train_dir, test_dir)
 	prep.setModel()

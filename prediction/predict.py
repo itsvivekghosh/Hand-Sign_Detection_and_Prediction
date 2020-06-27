@@ -77,7 +77,7 @@ class Predict(object):
 		return array
 
 
-	def predictImage(self, model_path = '../../Model/'):
+	def predictImage(self, model_path = '../../model/'):
 
 		self.loadModel(model_path)
 
@@ -122,7 +122,7 @@ class Predict(object):
 
 
 
-def predict_in_video(model_path = '../Model/'):
+def predict_in_video(model_path = '../model/'):
 	obj = Predict()
 	obj.predictImage(model_path)
 

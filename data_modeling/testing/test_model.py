@@ -14,8 +14,8 @@ class TestImage(object):
 
 	def __init__(self):
 		self.image_path = ''
-		self.model_path = '../../Model/'
-		self.test_path = '../../Data/test/'
+		self.model_path = '../../model/'
+		self.test_dir, self.output_dir = '', ''
 		self.image_size = (32, 32)
 		self.model = None
 		self.categories = {
@@ -70,12 +70,12 @@ class TestImage(object):
 
 		for i in range(6):
 
-			no_of_images_in_I = len(os.listdir("../../Data/test/{}/".format(i)))
+			no_of_images_in_I = len(os.listdir(self.test_dir+"{}/".format(i)))
 			random_image_value = self.getRandomValue(0, no_of_images_in_I+1)
 
-			image = cv2.imread(self.test_path+"{}/{}.jpg".format(i, random_image_value), 0)
+			image = cv2.imread(self.test_dir+"{}/{}.jpg".format(i, random_image_value), 0)
 
-			print("The Image is {}".format(self.test_path+"{}/{}.jpg".format(i, random_image_value)))
+			print("The Image is {}".format(self.test_dir+"{}/{}.jpg".format(i, random_image_value)))
 
 			processed_image = self.preprocessImage(image)
 			array = self.convertImageToArray(processed_image)
@@ -88,14 +88,17 @@ class TestImage(object):
 
 			plt.imshow(image)
 			plt.text(x=160, y=25, s=self.answer, fontsize=15)
-			plt.savefig("../../Outputs/{}.png".format(self.answer))
+			plt.savefig(self.output_dir+"{}.png".format(self.answer))
 			plt.show()
 
 
-def testModel():
+def testModel(test_dir = '../../data/test/', model_path = '../../model/', output_dir = '../../outputs/'):
 
 	rcParams['image.cmap'] = 'viridis'
 	obj = TestImage()
+	obj.test_dir = test_dir
+	obj.model_path = model_path
+	obj.output_dir = output_dir
 	obj.testImage()
 	print("Thanks!...")
 	print("Exiting!...")
