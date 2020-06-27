@@ -10,8 +10,8 @@ class CollectData(object):
 
 		print("Initializing...")
 		self.curr_dir = curr_dir
-		self.model_train_path = 'Data/train/'
-		self.model_test_path = 'Data/test/'
+		self.model_train_path = '../Data/train/'
+		self.model_test_path = '../Data/test/'
 
 		if not os.path.exists("Data"):
 
@@ -148,6 +148,13 @@ class CollectData(object):
 				else:
 					self.mode = 'train'
 				self.working_dir = 'Data/'+self.mode	
+
+
+def main():
+
+	current_directory = os.getcwd()
+	obj = CollectData(current_directory)
+	obj.generateData()
 
 
 if __name__ == '__main__':
