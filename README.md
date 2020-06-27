@@ -1,1 +1,1 @@
-# Hand-Sign_Detection_and_Prediction
+# Hand-Sign Detection and Prediction

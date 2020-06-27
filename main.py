@@ -24,7 +24,7 @@ class PredictClass(object):
 	def prepareModel(self):
 
 		# train_model.trainTheModel(train_dir, test_dir)
-		testModel(self.test_dir, self.model_dir, self.output_dir)
+		# testModel(self.test_dir, self.model_dir, self.output_dir)
 		pass
 
 
