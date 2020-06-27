@@ -38,14 +38,14 @@ class CollectData(object):
 
 	def generateTextIntoFrame(self, frame):
 		
-		cv2.putText(frame, "MODE: " + self.mode, (10, 50), cv2.FONT_HERSHEY_PLAIN, 1, (255, 0, 0), 1)
-		cv2.putText(frame, "IMAGE COUNT: ", (10, 100), cv2.FONT_HERSHEY_PLAIN, 1, (255, 0, 0), 1)
-		cv2.putText(frame, "ZERO: " + str(self.images_count['zero']), (10, 120), cv2.FONT_HERSHEY_PLAIN, 1, (255, 0, 0), 1)
-		cv2.putText(frame, "ONE: " + str(self.images_count['one']), (10, 150), cv2.FONT_HERSHEY_PLAIN, 1, (255, 0, 0), 1)
-		cv2.putText(frame, "TWO: " + str(self.images_count['two']), (10, 180), cv2.FONT_HERSHEY_PLAIN, 1, (255, 0, 0), 1)
-		cv2.putText(frame, "THREE: " + str(self.images_count['three']), (10, 210), cv2.FONT_HERSHEY_PLAIN, 1, (255, 0, 0), 1)
-		cv2.putText(frame, "FOUR: " + str(self.images_count['four']), (10, 240), cv2.FONT_HERSHEY_PLAIN, 1, (255, 0, 0), 1)
-		cv2.putText(frame, "FIVE: " + str(self.images_count['five']), (10, 270), cv2.FONT_HERSHEY_PLAIN, 1, (255, 0, 0), 1)
+		cv2.putText(frame, "MODE: " + self.mode, (10, 50), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 0, 0), 1)
+		cv2.putText(frame, "IMAGE COUNT: ", (10, 100), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 0, 0), 1)
+		cv2.putText(frame, "ZERO: " + str(self.images_count['zero']), (10, 120), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 0, 0), 1)
+		cv2.putText(frame, "ONE: " + str(self.images_count['one']), (10, 150), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 0, 0), 1)
+		cv2.putText(frame, "TWO: " + str(self.images_count['two']), (10, 180), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 0, 0), 1)
+		cv2.putText(frame, "THREE: " + str(self.images_count['three']), (10, 210), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 0, 0), 1)
+		cv2.putText(frame, "FOUR: " + str(self.images_count['four']), (10, 240), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 0, 0), 1)
+		cv2.putText(frame, "FIVE: " + str(self.images_count['five']), (10, 270), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 0, 0), 1)
 
 
 	def drawROI(self, frame):

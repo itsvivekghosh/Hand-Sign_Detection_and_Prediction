@@ -1,6 +1,7 @@
 from data_collection.data_collection import CollectData
 from data_modeling.training import train_model
 from data_modeling.testing import test_model
+from prediction.predict import predict_in_video
 import os
 
 
@@ -23,7 +24,9 @@ def prepareModel():
 def main():
 
 	# CollectImages()
-	prepareModel()
+	# prepareModel()
+	predict_in_video('Model/')
+	
 
 
 if __name__ == '__main__':
