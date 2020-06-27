@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 # Hand-Sign Detection and Prediction
-=======
-# Hand-Sign_Detection_and_Prediction
 
 ## Table of Content:
 #### 1. Cloning the Repository
@@ -110,4 +107,3 @@ __LinkedIn: https://www.linkedin.com/in/itsvivekghosh__<br>
 
 #### ***For any bugs and queries feel free to contact the above profiles. Well, we are working on fixing other Bugs.***
 # Happy Coding!
->>>>>>> 12eb446b29902a1b69648d6d11cea490d3118bf9
